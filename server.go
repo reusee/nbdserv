@@ -22,8 +22,10 @@ func Start(
 	ce(err)
 	var handshakeFlags uint16
 	err = binary.Write(conn, binary.BigEndian, handshakeFlags)
+	ce(err)
 	var clientFlags uint32
 	err = binary.Write(conn, binary.BigEndian, clientFlags)
+	ce(err)
 
 	// options
 
